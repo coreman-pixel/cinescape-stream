@@ -10,10 +10,6 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-
       <HeroSection />
 
       <div className="max-w-[1440px] mx-auto px-4 md:px-6 flex gap-6 pb-16">
