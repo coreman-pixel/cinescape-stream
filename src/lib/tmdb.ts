@@ -1,4 +1,4 @@
-const TMDB_API_KEY = ""; // Will be set via UI
+const TMDB_API_KEY = "de70a91ece3b37c3c45470a3fced02aa";
 const BASE_URL = "https://api.themoviedb.org/3";
 const IMG_BASE = "https://image.tmdb.org/t/p";
 
@@ -8,7 +8,6 @@ export const getImageUrl = (path: string | null, size: string = "w500") =>
 export const getBackdropUrl = (path: string | null) =>
   path ? `${IMG_BASE}/original${path}` : "/placeholder.svg";
 
-// Store API key in localStorage for client-side use
 export const setApiKey = (key: string) => localStorage.setItem("tmdb_api_key", key);
 export const getApiKey = () => localStorage.getItem("tmdb_api_key") || TMDB_API_KEY;
 
