@@ -8,7 +8,6 @@ export const getImageUrl = (path: string | null, size: string = "w500") =>
 export const getBackdropUrl = (path: string | null) =>
   path ? `${IMG_BASE}/original${path}` : "/placeholder.svg";
 
-// Store API key in localStorage for client-side use
 export const setApiKey = (key: string) => localStorage.setItem("tmdb_api_key", key);
 export const getApiKey = () => localStorage.getItem("tmdb_api_key") || TMDB_API_KEY;
 

@@ -1,16 +1,14 @@
-import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { tmdb, getApiKey } from "@/lib/tmdb";
+import { tmdb } from "@/lib/tmdb";
 import { Navbar } from "@/components/Navbar";
 import { HeroCarousel, HeroSkeleton } from "@/components/HeroCarousel";
 import { MovieRow } from "@/components/MovieRow";
 import { GenreSidebar } from "@/components/GenreSidebar";
-import { ApiKeyDialog } from "@/components/ApiKeyDialog";
 
 const Index = () => {
-  const [hasKey, setHasKey] = useState(!!getApiKey());
-
-  if (!hasKey) return <ApiKeyDialog onKeySet={() => setHasKey(true)} />;
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
 
   return (
     <div className="min-h-screen bg-background">
